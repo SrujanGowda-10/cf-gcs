@@ -13,4 +13,4 @@ steps:
     - --source=.
     - --set-env-vars=BUCKET_NAME=ci-cd-learning-dev
     - --allow-unauthenticated
-    - --service-account=SERVICE_ACCOUNT=sales-project@e-object-459802-s8.iam.gserviceaccount.com
+    - --service-account=sales-project@e-object-459802-s8.iam.gserviceaccount.com
