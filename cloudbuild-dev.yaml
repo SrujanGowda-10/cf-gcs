@@ -1,0 +1,14 @@
+steps:
+ - id: 'cloudfunction-dev-deploy'
+   name: gcr.io/cloud-builders/gcloud
+   args:
+    - functions
+    - deploy
+    - get_data_dev
+    - --runtime=python311
+    - --trigger-http
+    - --entry-point=get_data
+    - --region=us-central1
+    - --source=.
+    - --set-env-vars=BUCKET_NAME=ci-cd-learning-dev
+    - --allow-unauthenticated
