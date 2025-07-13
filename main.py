@@ -19,7 +19,7 @@ print(BUCKET_NAME)
 
 def get_data(request):
   url="https://fakestoreapi.com/products"
-  datetime_str = datetime.now().strftime("%Y%m%dT%H:%M:%S")
+  datetime_str = datetime.now().strftime("%Y%m%d")
   filename = f"fakestore_{datetime_str}.json"
 
   try:
