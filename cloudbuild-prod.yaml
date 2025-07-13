@@ -1,0 +1,16 @@
+steps:
+ - id: 'cloudfunction-prod-deploy'
+   name: gcr.io/cloud-builders/gcloud
+   args:
+    - functions
+    - deploy
+    - get_data_prod
+    - --no-gen2
+    - --runtime=python311
+    - --trigger-http
+    - --entry-point=get_data
+    - --region=us-central1
+    - --source=.
+    - --set-env-vars=BUCKET_NAME=ci-cd-learning-prod
+    - --allow-unauthenticated
+    - --service-account=sales-project@e-object-459802-s8.iam.gserviceaccount.com
