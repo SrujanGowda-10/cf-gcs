@@ -21,3 +21,6 @@ Thumbs.db
 
 # Ignore test files (optional)
 tests/
+
+# Exclude yaml files so it does not reflect in GUI of cloud functions
+cloudbuild-*.yaml
